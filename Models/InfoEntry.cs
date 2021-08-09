@@ -7,6 +7,7 @@ namespace DojoSurveyWValidation.Models
     public class InfoEntry
     {
         [Required(ErrorMessage ="Your name is required!")]
+        [MinLength(2)]
         public string Name { get; set; }
         [Required]
         public string Location { get; set; }
