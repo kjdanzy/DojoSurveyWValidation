@@ -1,0 +1,51 @@
+﻿@using DojoSurveyWValidation.Models;
+@model InfoEntry;
+
+@* @{
+    ViewData["Title"] = "Home Page";
+} *@
+
+<div>
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <h1>Please enter your information.</h1>
+    <form asp-controller="Home" asp-action="Display" method="post">
+            <div id="col1" class="table table-striped">
+                <div class="form-group">
+                    <label asp-for="Name">Your Name:</label>
+                    <input class="form-control w-50" type="text" asp-for="Name" placeholder="Please enter your first and last name..." />
+                    <span class="alert-danger" asp-validation-for="Name"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Location">Your Location:</label>
+                    <select  class="form-control w-50" asp-for="Location" >
+                        <option value="">Please make a selection</option>
+                        <option value="San Jose">San Jose</option>
+                        <option value="Chicago">Chicago</option>
+                        <option value="Atlanta">Atlanta</option>
+                        <option value="Florida">Florida</option>
+                    </select>
+                    <span class="alert-danger" asp-validation-for="Location"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Language">Favorite Language:</label>
+                    <select class="form-control w-50" asp-for="Language" >
+                        <option value="">Please make a selection</option>
+                        <option value="C#">C#</option>
+                        <option value="Python">Python</option>
+                        <option value="MERN">MERN</option>
+                        <option value="Javascript">Javascript</option>
+                    </select>
+                    <span class="alert-danger" asp-validation-for="Language"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Comment">Comment:</label><br>
+                    <textarea class="form-control w-50" asp-for="Comment" cols="30" rows="3"></textarea>
+                    <span class="alert-danger" asp-validation-for="Comment"></span>
+                </div>
+            </div>
+        <br><br>
+        <input class="btn btn-success" type="submit" value="Submit"/>
+    </form>
+</div>

@@ -1,0 +1,20 @@
+@using DojoSurveyWValidation.Models
+@model InfoEntry
+
+    <main id="main" class="main">
+            <div id="col1" class="navSubContainer table table-striped">
+                <div class="navSubSubContainer">
+                    <label class="form-control"><b>Your Name:</b>  @Model.Name</label>
+                </div>
+                <div>
+                    <label class="form-control"><b>Your Location:</b>  @Model.Location</label>
+                </div>
+                <div>
+                    <label class="form-control"><b>Favorite Language:</b>  @Model.Language</label>
+                </div>
+                <div>
+                    <label class="form-control"><b>Comment:</b>  @Model.Comment</label><br>
+                </div>
+            </div>
+            <a class="btn btn-success" href="/">Go Back</a>
+        </main>
